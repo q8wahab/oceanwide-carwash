@@ -1,0 +1,90 @@
+Project Overview
+Build a mobile-first web app for customers of Oceanwide Carwash. Customers enter their phone number, and the app shows:
+
+Total washes completed
+
+Visual progress tracker (snake-style)
+
+Milestones for free washes
+
+Instagram & WhatsApp links
+
+✅ Key Features
+Start Page
+
+Title: Oceanwide Carwash
+
+Text: “Enter your phone number to find out how many washes you've done and how close you are to your next reward!”
+
+Phone number input (local 8-digit number, no country code)
+
+Button: View Progress
+
+Footer links:
+
+[Instagram logo] → Link to Instagram page
+
+[WhatsApp button] → Opens WhatsApp chat
+
+Wash Progress Page
+
+Display:
+
+User’s phone number (e.g. 555-1234)
+
+Text: Washes Completed: [X]
+
+Show a snake-shaped progress tracker using rows of circles
+
+Reward System:
+
+7 circles → 🎁 Free Wash (at wash #8)
+
+7 circles → ⭐ Special Wash (at wash #16)
+
+7 circles → 🌊 Ocean Wash (at wash #24)
+
+Total = 21 circles, 3 reward blocks
+
+Highlight completed circles in green/blue
+
+Rewards appear after each set of 7 circles
+
+Phone Not Found Page
+
+Message: “Number not found. Please double-check or contact us on WhatsApp.”
+
+Retry button
+
+WhatsApp contact button
+
+🛠️ Backend – Supabase
+Supabase Project Info
+You can fill these before sending to dev:
+
+Project URL: https://[your-project-ref].supabase.co
+
+Anon Public API Key: your-anon-public-api-key
+(Find both in Settings > API tab)
+
+Table: customers
+Column Name	Type	Description
+id	UUID	Auto-generated primary key
+phone	TEXT	Unique customer phone number
+normal	INT	Count of normal washes
+special	INT	Count of special washes
+external	INT	Count of external washes
+ocean	INT	Count of ocean washes
+total	INT	Total washes (optional – or calculate sum)
+created_at	TIMESTAMP	(Optional)
+
+Use Row-Level Security (RLS) to restrict query by phone number only.
+
+💻 Frontend
+Tech	Details
+Framework	Next.js
+Styling	Tailwind CSS
+Auth	❌ No login (open access by phone)
+API Calls	Supabase JS Client (fetch by phone number)
+Responsive	✅ Mobile-first, works on all devices
+

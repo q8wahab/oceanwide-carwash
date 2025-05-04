@@ -1,0 +1,34 @@
+{
+  "name": "oceanwide-carwash-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "clsx": "^2.1.0",
+    "cmdk": "1.0.0",
+    "date-fns": "^2.30.0",
+    "lucide-react": "^0.316.0",
+    "next": "14.1.3",
+    "react": "^18.2.0",
+    "react-day-picker": "8.10.1",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.3",
+    "@types/react": "18.3.20",
+    "autoprefixer": "^10.4.17",
+    "eslint": "8.56.0",
+    "eslint-config-next": "14.1.3",
+    "postcss": "^8.4.35",
+    "prettier": "3.2.5",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.3"
+  }
+}
