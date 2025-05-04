@@ -160,7 +160,9 @@ export default function ProgressPage() {
       </div>
 
       <Link href="/" passHref legacyBehavior>
-         <Button variant="link" className="mt-8 text-blue-600">Check another number</Button>
+        <Button className="mt-8 text-blue-600 underline hover:text-blue-800">
+  Check another number
+</Button>
       </Link>
     </div>
   );
