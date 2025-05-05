@@ -28,14 +28,14 @@ const RewardBlock: React.FC<{ title: string; icon: string; achieved: boolean }> 
 
 // Component for a row of circles
 const CircleRow: React.FC<{ count: number; startIndex: number; totalWashes: number }> = ({ count, startIndex, totalWashes }) => (
-  <div className="flex flex-row-reverse justify-center items-center gap-3 my-2">
+  <div className="flex flex-row-reverse justify-center items-center gap-4 my-3">
     {[...Array(count)].map((_, i) => {
       const circleIndex = startIndex + i;
       const state = getCircleState(circleIndex, totalWashes);
       return (
         <div
           key={circleIndex}
-          className={`w-4 h-4 rounded-full transition-colors duration-300 ${
+          className={`w-5 h-5 rounded-full transition-all duration-300 ${
             state === 'completed' ? 'bg-sky-400' : 'bg-gray-300'
           }`}
         ></div>
@@ -43,6 +43,7 @@ const CircleRow: React.FC<{ count: number; startIndex: number; totalWashes: numb
     })}
   </div>
 );
+
 
 
 
