@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { supabase } from '@/lib/supabaseClient'; // Import Supabase client
+import SnakeRow from "@/components/SnakeRow";
 
 // Data structure for customer progress
 interface CustomerData {
@@ -144,20 +145,24 @@ export default function ProgressPage() {
       <p className="text-md font-semibold mb-6 text-gray-800">Washes Completed: {totalWashes}</p>
 
       {/* Visual Progress Tracker */} 
-      <div className="w-full max-w-sm p-4 border border-gray-200 rounded-lg bg-white shadow">
-        {/* Segment 1: Towards Free Wash */} 
-        <CircleRow count={7} startIndex={0} totalWashes={totalWashes} />
-        {/* Reward achieved if total washes > threshold */} 
-        <RewardBlock title="Free Wash" icon="🎁" achieved={totalWashes > washesNeededForFree} /> 
-        
-        {/* Segment 2: Towards Special Wash */} 
-        <CircleRow count={7} startIndex={7} totalWashes={totalWashes} />
-        <RewardBlock title="Special Wash" icon="⭐" achieved={totalWashes > washesNeededForSpecial} />
+      
 
-        {/* Segment 3: Towards Ocean Wash */} 
-        <CircleRow count={7} startIndex={14} totalWashes={totalWashes} />
-        <RewardBlock title="Ocean Wash" icon="🌊" achieved={totalWashes > washesNeededForOcean} />
-      </div>
+
+
+<div className="w-full max-w-sm p-4 border border-gray-200 rounded-lg bg-white shadow">
+  {/* Row 1: Left → Right */}
+  <SnakeRow count={7} startIndex={0} totalWashes={totalWashes} />
+  <RewardBlock title="Free Wash" icon="🎁" achieved={totalWashes > 7} />
+
+  {/* Row 2: Right → Left */}
+  <SnakeRow count={7} startIndex={7} totalWashes={totalWashes} reverse />
+  <RewardBlock title="Special Wash" icon="⭐" achieved={totalWashes > 14} />
+
+  {/* Row 3: Left → Right */}
+  <SnakeRow count={7} startIndex={14} totalWashes={totalWashes} />
+  <RewardBlock title="Ocean Wash" icon="🌊" achieved={totalWashes > 21} />
+</div>
+
 
       <Link href="/" passHref legacyBehavior>
         <Button className="mt-8 text-blue-600 underline hover:text-blue-800">
