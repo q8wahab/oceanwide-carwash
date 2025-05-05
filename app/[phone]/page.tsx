@@ -36,13 +36,14 @@ const CircleRow: React.FC<{ count: number; startIndex: number; totalWashes: numb
         <div
           key={circleIndex}
           className={`w-5 h-5 rounded-full transition-all duration-300 ${
-            state === 'completed' ? 'bg-sky-400' : 'bg-gray-300'
+            state === 'completed' ? 'bg-blue-500' : 'bg-gray-300'
           }`}
         ></div>
       );
     })}
   </div>
 );
+
 
 
 
@@ -160,7 +161,7 @@ export default function ProgressPage() {
   <RewardBlock title="Free Wash" icon="🎁" achieved={totalWashes > 7} />
 
   {/* Row 2: Right → Left */}
-  <SnakeRow count={7} startIndex={7} totalWashes={totalWashes} reverse />
+  <SnakeRow count={7} startIndex={7} totalWashes={totalWashes} />
   <RewardBlock title="Special Wash" icon="⭐" achieved={totalWashes > 14} />
 
   {/* Row 3: Left → Right */}

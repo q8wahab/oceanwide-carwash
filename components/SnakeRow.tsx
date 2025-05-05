@@ -14,7 +14,7 @@ const SnakeRow: React.FC<SnakeRowProps> = ({ count, startIndex, totalWashes, rev
     return (
       <div
         key={index}
-        className={`w-4 h-4 rounded-full ${filled ? "bg-teal-500" : "bg-gray-300"}`}
+        className={`w-4 h-4 rounded-full ${filled ? "bg-sky-300" : "bg-gray-200"}`}
       ></div>
     );
   });
