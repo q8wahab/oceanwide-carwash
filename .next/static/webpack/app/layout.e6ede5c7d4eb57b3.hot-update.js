@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunk_N_E"] = self["webpackChunk_N_E"] || []).push([["app/layout"],{
+self["webpackHotUpdate_N_E"]("app/layout",{
 
 /***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2FUsers%2Fwahab%2FDesktop%2Fcoding%2Foceanwide-carwash%2Fapp%2Fglobals.css&modules=%2FUsers%2Fwahab%2FDesktop%2Fcoding%2Foceanwide-carwash%2Fnode_modules%2F%40vercel%2Fanalytics%2Fdist%2Freact%2Findex.mjs&server=false!":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -61,11 +61,4 @@ eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* har
 
 /***/ })
 
-},
-/******/ function(__webpack_require__) { // webpackRuntimeModules
-/******/ var __webpack_exec__ = function(moduleId) { return __webpack_require__(__webpack_require__.s = moduleId); }
-/******/ __webpack_require__.O(0, ["main-app"], function() { return __webpack_exec__("(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2FUsers%2Fwahab%2FDesktop%2Fcoding%2Foceanwide-carwash%2Fapp%2Fglobals.css&modules=%2FUsers%2Fwahab%2FDesktop%2Fcoding%2Foceanwide-carwash%2Fnode_modules%2F%40vercel%2Fanalytics%2Fdist%2Freact%2Findex.mjs&server=false!"); });
-/******/ var __webpack_exports__ = __webpack_require__.O();
-/******/ _N_E = __webpack_exports__;
-/******/ }
-]);
+});
